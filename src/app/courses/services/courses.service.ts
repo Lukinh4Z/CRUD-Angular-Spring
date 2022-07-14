@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { first, tap } from 'rxjs';
+import { delay, first, tap } from 'rxjs';
 
 import { Course } from './../model/course';
 
@@ -23,6 +23,8 @@ export class CoursesService {
       // faço isso porque não vou mais precisar de respostas do servidor;
       // poderia usar tbm "take(1)".
       first(),
+      // esse delay é apenas para fazer o teste durante dev.
+      delay(5000),
       tap((courses) => console.log(courses))
     );
   }
