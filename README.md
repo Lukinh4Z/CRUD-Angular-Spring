@@ -1,6 +1,6 @@
 # CrudAngular
 
-This is being made for with Loaian Groner learning path.
+This is being made for with [Loaiane Groner](https://github.com/loiane/crud-angular-spring) learning path.
 
 ## Characteristics
 
