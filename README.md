@@ -1,4 +1,4 @@
-# CrudAngular
+# Crud Angular
 
 This is being made for with Loaian Groner learning path.
 

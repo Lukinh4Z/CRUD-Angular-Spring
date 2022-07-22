@@ -10,8 +10,8 @@ import { Course } from './../model/course';
   providedIn: 'root',
 })
 export class CoursesService {
-  // private readonly API = 'api/courses';
-  private readonly API = '../../../assets/courses.json';
+  private readonly API = 'api/courses';
+  // private readonly API = '../../../assets/courses.json';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -26,8 +26,12 @@ export class CoursesService {
       // poderia usar tbm "take(1)".
       first(),
       // esse delay é apenas para fazer o teste durante dev.
-      delay(5000),
+      // delay(5000),
       tap((courses) => console.log(courses))
     );
+  }
+
+  save(record: Course) {
+    return this.httpClient.post<Course>(this.API, record).pipe(first());
   }
 }
